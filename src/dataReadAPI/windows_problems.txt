@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=7inlLQo6vkE
+
+Windows 10 Start Menu & Cortana Not Working
+
+Steps
+1. Press Alt+Ctrl+Del
+2. Click on 'Task Manager'
+3. Click on 'File' and click on 'Run new task'
+4. Check 'Create this task with administrative privileges' 
+5. Type 'powershell' and click ok
+6. copy and pest this code from comments
+'Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"­}'
+7. Exit powershell
+8. From task manager Click on 'File' and click on 'Run new task'
+9. Type 'c:\' and click ok
+10. Go to View -> Options -> Change folder and search options
+11. Go to View, click on 'Show Hidden files, folder and drives' and click apply and click ok
+12. From task manager Click on 'File' and click on 'Run new task'
+13. Check 'Create this task with administrative privileges'
+14. Type 'services.msc' and click ok
+15. Find 'Tile Data model server' and click on it
+16. Click 'Stop'
+17. Go to c:\Users\[current user name]\AppData\Local
+18. Delete 'TileDataLayer' Folder and restart your PC
